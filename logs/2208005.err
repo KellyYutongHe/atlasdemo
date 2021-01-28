@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "main.py", line 2, in <module>
+    raise Exception("Error works as well!")
+Exception: Error works as well!
