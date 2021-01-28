@@ -2,7 +2,7 @@
 JOBNAME="jobname"
 #source your_virtua_env_dir
 cd /sailhome/kellyyhe/atlasdemo/
-GPUS=0
+GPUS=10
 echo "Number of GPUs: "${GPUS}
 WRAP="python main.py"
 LOG_FOLDER="./logs/"
