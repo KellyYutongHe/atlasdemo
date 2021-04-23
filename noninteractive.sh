@@ -2,7 +2,7 @@
 JOBNAME="jobname"
 #source your_virtua_env_dir
 cd /sailhome/kellyyhe/atlasdemo/
-GPUS=10
+GPUS=1
 echo "Number of GPUs: "${GPUS}
 WRAP="python main.py"
 LOG_FOLDER="./logs/"
@@ -12,5 +12,5 @@ mkdir -p ${LOG_FOLDER}
 sbatch --output=${LOG_FOLDER}/%j.out --error=${LOG_FOLDER}/%j.err \
     --exclude=atlas1,atlas2,atlas3,atlas4,atlas5,atlas6 \
     --nodes=1 --ntasks-per-node=1 --time=1-00:00:00 --mem=32G \
-    --partition=atlas --cpus-per-task=20 \
+    --partition=atlas --cpus-per-task=8 \
     --gres=gpu:titanxp:${GPUS} --job-name=${JOBNAME} --wrap="${WRAP}"
