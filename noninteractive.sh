@@ -1,6 +1,6 @@
 #!/bin/bash
 JOBNAME="jobname"
-#source your_virtua_env_dir
+source your_virtua_env_dir
 cd /sailhome/kellyyhe/atlasdemo/
 GPUS=1
 echo "Number of GPUs: "${GPUS}
